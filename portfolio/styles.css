@@ -1,0 +1,237 @@
+
+:root {
+    --bg-primary: #f5f7fa;
+    --bg-secondary: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #555555;
+    --highlight-color: #ff5722;
+    --accent-color: #007bff;
+    --font-main: 'Nunito', sans-serif;
+    --font-heading: 'Raleway', sans-serif;
+    --transition-speed: 0.4s ease-in-out;
+}
+
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+
+.navbar {
+    background: var(--bg-secondary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color var(--transition-speed);
+}
+
+.nav-link:hover {
+    color: var(--highlight-color);
+}
+
+header {
+    background: linear-gradient(90deg, var(--highlight-color), var(--accent-color));
+    color: var(--bg-secondary);
+    text-align: center;
+    padding: 100px 20px;
+    clip-path: ellipse(150% 90% at 50% 10%);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-bottom: 25px;
+}
+
+header .btn {
+    padding: 12px 30px;
+    background: var(--bg-secondary);
+    color: var(--highlight-color);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(255, 87, 34, 0.4);
+    transition: transform var(--transition-speed), background var(--transition-speed);
+}
+
+header .btn:hover {
+    transform: translateY(-5px);
+    background: var(--bg-primary);
+    color: var(--accent-color);
+}
+
+
+#about {
+    background: var(--bg-secondary);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#about img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--highlight-color);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition-speed);
+}
+
+#about img:hover {
+    transform: scale(1.1);
+}
+
+#about h2 {
+    margin-top: 20px;
+    color: var(--highlight-color);
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Portfolio Section */
+#portfolio {
+    background: var(--bg-primary);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#portfolio h2 {
+    margin-bottom: 40px;
+    color: var(--highlight-color);
+}
+
+#portfolio .card {
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+#portfolio .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+#portfolio .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#portfolio .card-body {
+    padding: 15px;
+}
+
+
+#skills {
+    background: linear-gradient(90deg, var(--highlight-color), var(--accent-color));
+    color: var(--bg-secondary);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#skills .skill-item {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed);
+}
+
+#skills .skill-item:hover {
+    transform: translateY(-10px);
+    background: var(--bg-primary);
+}
+
+
+#contact {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 80px 20px;
+    text-align: center;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+}
+
+#contact p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#contact form input, #contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
+}
+
+#contact form button {
+    background: var(--highlight-color);
+    color: var(--bg-secondary);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background var(--transition-speed);
+}
+
+#contact form button:hover {
+    background: var(--accent-color);
+}
+
+
+footer {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
